@@ -36,9 +36,10 @@ public class UserResponseDto {
   @Schema(name = "lastLogin", description = "Last login date of user", example = "2023-12-12T22:23:46.24338")
   private LocalDateTime lastLogin;
 
-  @Schema(name = "token", description = "Token for user creation", example = "3c2fad53-83be-747c-a209-89f0c1596d68")
+  @Schema(name = "token", description = "Token for user creation", example = "3c2fad53-83be-857c-a209-89f0c1596d68")
   private String token;
 
   @Schema(name = "isActive", description = "Status for user creation", example = "true")
   private Boolean isActive;
+
 }

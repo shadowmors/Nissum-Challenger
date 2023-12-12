@@ -15,7 +15,7 @@ public class PhoneDto {
   @Schema(name = "id", description = "Identifier for phone creation", example = "1")
   private Integer id;
 
-  @Schema(name = "number", description = "Number of cellphone", example = "999342542")
+  @Schema(name = "number", description = "Number of cellphone", example = "996357986")
   private String number;
 
   @Schema(name = "cityCode", description = "City code number", example = "200")

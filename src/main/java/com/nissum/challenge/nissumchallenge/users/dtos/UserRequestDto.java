@@ -1,5 +1,7 @@
 package com.nissum.challenge.nissumchallenge.users.dtos;
 
+
+import com.nissum.challenge.nissumchallenge.users.annotation.CustomPattern;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
@@ -19,9 +21,12 @@ public class UserRequestDto {
   @Schema(name = "name", description = "Name for user creation", example = "Brayan")
   private String name;
 
+  @CustomPattern(patternPropertyKey = "validations-dto.user-request.email-format", message = "El formato del correo electrónico no es válido")
   @Schema(name = "email", description = "Email for user creation", example = "brayanrondonh@gmail.com")
   private String email;
 
+  @CustomPattern(patternPropertyKey = "validations-dto.user-request.password-format", message = "La contraseña debe tener por lo menos una mayúscula y un caracter especial")
+  @CustomPattern(patternPropertyKey = "validations-dto.user-request.password-min-size", message = "La contraseña debe tener al menos 8 caracteres")
   @Schema(name = "password", description = "Password for user creation", example = "Admin$2023")
   private String password;
 
